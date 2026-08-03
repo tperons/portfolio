@@ -1,0 +1,43 @@
+#contact {
+  padding: 7rem 0 4rem;
+  background: var(--bg3);
+  text-align: center;
+}
+
+.contact-tagline {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--muted-rgb), 0.3);
+  color: var(--muted);
+  font-size: 1.35rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: all 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    border-color: var(--purple);
+    color: var(--purple);
+    background: rgba(var(--purple-rgb), 0.1);
+    transform: translateY(-4px);
+  }
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(var(--muted-rgb), 0.15);
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.75rem;
+  color: var(--muted);
+}

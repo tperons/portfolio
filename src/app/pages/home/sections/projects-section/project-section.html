@@ -1,0 +1,17 @@
+<section id="projects">
+  <div class="container">
+    <div class="text-center mb-5 fade-up" appFadeUp>
+      <p class="section-tag">// projetos em destaque</p>
+      <h2 class="section-title">O que eu <span>construo</span></h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      @for (project of projects; track project.title) {
+        <div class="col-md-6 col-lg-5 fade-up" appFadeUp>
+          <app-project-card [project]="project"/>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,223 @@
+/* You can add global styles to this file, and also import other style files */
+/* ─── CSS Variables ───────────────────────────────────────────── */
+:root,
+[data-bs-theme="dark"] {
+  --bg: #0e0f11;
+  --bg2: #1a1c20;
+  --bg3: #0a0b0d;
+  --text: #e8eaed;
+  --muted: #888c94;
+  --purple: #8aa0c9;
+  --green: #c7d2e4;
+  --cyan: #a9bedd;
+  --pink: #7387b0;
+  --red: #4a5f8c;
+  --orange: #5f76a0;
+
+  --bg-rgb: 14, 15, 17;
+  --bg2-rgb: 26, 28, 32;
+  --bg3-rgb: 10, 11, 13;
+  --text-rgb: 232, 234, 237;
+  --muted-rgb: 136, 140, 148;
+  --purple-rgb: 138, 160, 201;
+  --green-rgb: 199, 210, 228;
+  --cyan-rgb: 169, 190, 221;
+  --pink-rgb: 115, 135, 176;
+  --red-rgb: 74, 95, 140;
+  --orange-rgb: 95, 118, 160;
+}
+
+[data-bs-theme="light"] {
+  --bg: #f5f6f8;
+  --bg2: #ececef;
+  --bg3: #ffffff;
+  --text: #1b1d21;
+  --muted: #5b5f68;
+  --purple: #3f5a86;
+  --green: #1f2e47;
+  --cyan: #2c4468;
+  --pink: #4f6b99;
+  --red: #7c93bd;
+  --orange: #6280ac;
+
+  --bg-rgb: 245, 246, 248;
+  --bg2-rgb: 236, 238, 241;
+  --bg3-rgb: 255, 255, 255;
+  --text-rgb: 27, 29, 33;
+  --muted-rgb: 91, 95, 104;
+  --purple-rgb: 63, 90, 134;
+  --green-rgb: 31, 46, 71;
+  --cyan-rgb: 44, 68, 104;
+  --pink-rgb: 79, 107, 153;
+  --red-rgb: 124, 147, 189;
+  --orange-rgb: 98, 128, 172;
+}
+
+:root {
+  --font-mono: "Space Mono", monospace;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* ─── Reset & Base ────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ─── Noise texture overlay ───────────────────────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.35;
+}
+
+section,
+nav,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 99px;
+}
+
+/* ─── Typography helpers ────────────────────────────────────────── */
+.mono {
+  font-family: var(--font-mono), sans-serif;
+}
+
+.text-purple {
+  color: var(--purple) !important;
+}
+
+.text-green {
+  color: var(--green) !important;
+}
+
+.text-cyan {
+  color: var(--cyan) !important;
+}
+
+.text-pink {
+  color: var(--pink) !important;
+}
+
+.text-muted-custom {
+  color: var(--muted) !important;
+}
+
+/* ─── Section headings (usado em about, skills, projects, contact) ── */
+.section-tag {
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.75rem;
+  color: var(--green);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-mono), sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.section-title span {
+  color: var(--purple);
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--cyan));
+  margin-bottom: 2.5rem;
+}
+
+/* ─── Botões (usados em hero E contact) ─────────────────────────── */
+.btn-primary-custom {
+  background: var(--green);
+  color: var(--bg);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(var(--green-rgb), 0.25);
+  color: var(--bg);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding: 0.75rem 2rem;
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline-custom:hover {
+  background: rgba(var(--purple-rgb), 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(var(--purple-rgb), 0.15);
+  color: var(--purple);
+}
+
+/* ─── Fade-in animation (usado por appFadeUp em vários componentes) ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

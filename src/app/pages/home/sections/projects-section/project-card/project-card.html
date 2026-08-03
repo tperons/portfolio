@@ -1,0 +1,27 @@
+<div class="project-card">
+  <div class="project-card-header">
+    <span class="project-icon">
+      <i class="bi bi-code-square" style="color: var(--purple)"></i>
+    </span>
+    <div class="project-links">
+      <a [href]="project().githubUrl" title="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      @if (project().demoUrl) {
+        <a [href]="project().demoUrl" title="Live Demo">
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+      }
+    </div>
+  </div>
+
+  <div class="project-body">
+    <h3 class="project-title">{{ project().title }}</h3>
+    <p class="project-desc">{{ project().description }}</p>
+    <div>
+      @for (tech of project().techs; track tech.name) {
+        <span class="tech-badge" [class]="'badge-' + tech.color"> {{ tech.name }}</span>
+      }
+    </div>
+  </div>
+</div>
