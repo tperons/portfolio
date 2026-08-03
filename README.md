@@ -34,8 +34,8 @@ Portfólio pessoal de **Tiago Peron**, Desenvolvedor Java Full-Stack. Single-pag
 ## 🚀 Instalação
 
 ```bash
-git clone https://github.com/tperons/portfilio.git
-cd portfilio
+git clone https://github.com/tperons/portfolio.git
+cd portfolio
 npm install
 ```
 

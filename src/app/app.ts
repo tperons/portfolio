@@ -10,5 +10,5 @@ import {Home} from './pages/home/home';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('portfilio');
+  protected readonly title = signal('portfolio');
 }
