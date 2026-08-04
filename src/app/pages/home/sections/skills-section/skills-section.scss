@@ -10,8 +10,20 @@
   border-radius: 10px;
   padding: 1.75rem 1.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
   height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #bd93f9, #8be9fd, #9d2b4e);
+  }
 
   &:hover {
     transform: translateY(-6px);
@@ -20,7 +32,8 @@
   }
 
   .icon {
-    font-size: 2.2rem;
+    font-size: 2.75rem;
+    margin-top: 0.25rem;
     margin-bottom: 0.75rem;
     display: block;
   }

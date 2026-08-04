@@ -13,12 +13,9 @@
           <div class="col-6 col-sm-4 col-md-3 col-lg-2 fade-up" appFadeUp>
             <div class="skill-card">
         <span class="icon" [style.color]="skill.iconColor">
-          <i class="bi" [class]="skill.icon"></i>
+          <i [class]="skill.icon"></i>
         </span>
               <span class="name">{{ skill.name }}</span>
-              <div class="level">
-                <div class="level-fill" [style.--pct]="skill.level + '%'"></div>
-              </div>
             </div>
           </div>
         }
