@@ -1,2 +1,5 @@
 src/app/**/*.html linguist-detectable=false
 src/app/**/*.scss linguist-detectable=false
+*.jpg binary
+*.webp binary
+*.png binary
