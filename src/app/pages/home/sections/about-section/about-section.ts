@@ -10,6 +10,4 @@ import {FadeUp} from '../../../../shared/directives/fade-up';
   styleUrl: './about-section.scss',
 })
 export class AboutSection {
-  currentYear: number = new Date().getFullYear();
-  experienceYears: number = Math.max(this.currentYear - 2025, 1);
 }
