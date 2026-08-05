@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Project} from './project.model';
+import {Project} from '../../../../core/models/project.model';
 import {FadeUp} from '../../../../shared/directives/fade-up';
 import {ProjectCard} from './project-card/project-card';
 
@@ -9,10 +9,10 @@ import {ProjectCard} from './project-card/project-card';
     FadeUp,
     ProjectCard
   ],
-  templateUrl: './project-section.html',
-  styleUrl: './project-section.scss',
+  templateUrl: './projects.html',
+  styleUrl: './projects.scss',
 })
-export class ProjectSection {
+export class Projects {
   projects: Project[] = [
     {
       title: 'Marginalia API',

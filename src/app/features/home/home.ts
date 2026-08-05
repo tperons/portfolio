@@ -1,22 +1,21 @@
 import {afterNextRender, Component, inject} from '@angular/core';
-import {HeroSection} from './sections/hero-section/hero-section';
-import {AboutSection} from './sections/about-section/about-section';
-import {SkillsSection} from './sections/skills-section/skills-section';
-import {ProjectSection} from './sections/projects-section/project-section';
-import {ContactSection} from './sections/contact-section/contact-section';
+import {Hero} from './components/hero/hero';
+import {About} from './components/about/about';
+import {Skills} from './components/skills/skills';
+import {Projects} from './components/projects/projects';
+import {Contact} from './components/contact/contact';
 import {ActiveSectionService} from '../../core/services/active-section';
 
 @Component({
   selector: 'app-home',
   imports: [
-    HeroSection,
-    AboutSection,
-    SkillsSection,
-    ProjectSection,
-    ContactSection
+    Hero,
+    About,
+    Skills,
+    Projects,
+    Contact
   ],
   templateUrl: './home.html',
-  styleUrl: './home.scss',
 })
 export class Home {
   private activeSectionService = inject(ActiveSectionService);

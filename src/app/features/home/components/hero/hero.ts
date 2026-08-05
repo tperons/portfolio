@@ -2,12 +2,12 @@ import {Component} from '@angular/core';
 import {FadeUp} from '../../../../shared/directives/fade-up';
 
 @Component({
-  selector: 'app-about-section',
+  selector: 'app-hero-section',
   imports: [
     FadeUp
   ],
-  templateUrl: './about-section.html',
-  styleUrl: './about-section.scss',
+  templateUrl: './hero.html',
+  styleUrl: './hero.scss',
 })
-export class AboutSection {
+export class Hero {
 }

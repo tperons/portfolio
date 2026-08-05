@@ -6,9 +6,9 @@ import {FadeUp} from '../../../../shared/directives/fade-up';
   imports: [
     FadeUp
   ],
-  templateUrl: './contact-section.html',
-  styleUrl: './contact-section.scss',
+  templateUrl: './contact.html',
+  styleUrl: './contact.scss',
 })
-export class ContactSection {
+export class Contact {
   currentYear: number = new Date().getFullYear();
 }
