@@ -5,7 +5,7 @@ import {Home} from './features/home/home';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Home, Navbar],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
 })
 export class App {
